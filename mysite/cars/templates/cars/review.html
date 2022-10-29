@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Here is Review page</h1>
+
+<div class = 'container'>
+    <form  method = 'post'>
+        {% csrf_token %}
+        {{form.as_p}}
+        <div class="col-auto">
+          <button type="submit" class="btn btn-primary mb-3">Confirm identity</button>
+        </div>
+      </form>
+    
+</div>
+
+
+{% endblock content %}
